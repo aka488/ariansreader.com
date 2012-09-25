@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>Readr</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../pages/feed.html">Reader</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Arian Agrawal</a>
+            </p>
+            <ul class="nav">
+              <li><a href="../pages/home.html">Home</a></li>
+              <li class="active"><a href="../pages/about.html">About</a></li>
+              <li><a href="../pages/setup.html">Settings</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+
+      <div class="row-fluid">
+        <div class="span2">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Inbox</li>
+              <li class="nav-header">My Lists</li>
+              <li><a href="../pages/tech.html">Tech</a></li>
+              <li><a href="../pages/startups.html">Startups</a></li>
+              <li><a href="../pages/business.html">Business</a></li>
+              <li><a href="../pages/politics.html">Politics</a></li>
+              <li class="nav-header">Following</li>
+              <li><a href="../pages/followtech.html">Tech by Sarina</a></li>
+              <li><a href="../pages/followprogramming.html">Programming by Corey</a></li>
+              <li><a href="../pages/followbiotech.html">Biotech by Claire</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span10">
+          <div class="hero-unit">
+            <h1>Your Reader</h1>
+            <h3> View the lists you selected </h3>
+            <p> </p>
+            <h3>  </h3>
+  <p>
+    <input id="email" type="text" class="input-small span3" placeholder="Email"> </p>
+    <p>
+    <button type="submit" class="btn">Sign up!</button>
+  </p>
+            <h4> Or Log in Using your Facebook account </h4>
+    
+</div>
+
+
+          </div>
+          <div class="row-fluid">
+            <div class="span4">
+              <h2>Find</h2>
+              <p>Find all of the news you are interested in one place</p>
+              <p><a class="btn" href="../pages/find.html">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Share</h2>
+              <p>Share easily the articles or blogs that you are interested in with the people you care about</p>
+              <p>Follow people in your network and find what they are reading</p>
+              <p><a class="btn" href="../pages/share.html">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Discuss</h2>
+              <p>Discuss topics that are of interest to you and people with similar interests. </p>
+              <p><a class="btn" href="../pages/discuss.html">View details &raquo;</a></p>
+            </div><!--/span-->
+          </div><!--/row-->
+         
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Reader 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+ 
+<!-- Modal -->
+<!-- Button to trigger modal -->
+<!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+ 
+ 
+div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+   
+  </div>
+</div>
+-->
+<script>
+  $('.btn').click(function(){
+    var email = $('#email').val();
+    $.post("https://platform.launchrock.com/v1/createSiteUser", {
+      site_id: "1FA2I452",
+      email: email,
+      password: "",
+      parent_id: ""
+    }
+      alert("As you can see, the link no longer took you to jquery.com");
+         event.preventDefault()
+    function(e){
+      console.log(e);
+    })
+  })
+</script>
+    
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
